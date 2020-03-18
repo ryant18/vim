@@ -1070,8 +1070,8 @@ win_line(
 			else
 			{
 			    // 'relativenumber', don't use negative numbers
-			    num = labs((long)get_cursor_rel_lnum(wp, lnum));
-			    if (num == 0 && wp->w_p_nu && wp->w_p_rnu)
+			    num = labs((long)get_cursor_rel_lnum(wp, lnum)) + 1;
+			    if (num == 1 && wp->w_p_nu && wp->w_p_rnu)
 			    {
 				// 'number' + 'relativenumber'
 				num = lnum;
